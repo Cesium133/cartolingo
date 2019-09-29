@@ -1,0 +1,26 @@
+#map {
+    height:78%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    background:white;
+    text-align: center;
+    height:200px;
+}
+
+.navbar-brand, .nav-link, .dropdown-item {
+    font-family: 'Monda', sans-serif;
+}
+
+.head h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+}
+
+.head h2 {
+    font-family: 'Cantarell', sans-serif;
+    color:rgb(110, 109, 109);
+}

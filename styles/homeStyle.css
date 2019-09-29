@@ -1,0 +1,62 @@
+body {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.head {
+    background:white;
+    text-align: center;
+}
+
+.navbar {
+    margin-top: 5px;
+    /* font-weight:bold; */
+}
+
+#body-contain {
+    margin-top: 2%;
+    text-align:justify;
+
+}
+
+/* #logo {
+    margin: 0 auto;
+    width:750px;   
+    display:block;
+} */
+
+.navbar-brand, .nav-link, .dropdown-item {
+    font-family: 'Monda', sans-serif;
+}
+
+.head h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+}
+
+.head h2 {
+    font-family: 'Cantarell', sans-serif;
+    color:rgb(110, 109, 109);
+}
+
+.question {
+    font-family: 'Arapey', serif;
+    color:rgb(75, 73, 73);
+    font-size: 30px;
+}
+
+.answer {
+    font-family: 'Arapey', serif;
+    font-size:20px;
+    color:rgb(122, 116, 116)
+}
+
+#body-contain a {
+    color: rgb(124, 38, 38)
+}
+
+footer { 
+    font-family: 'Cantarell', sans-serif;
+    width:100%;
+    background-color:white;
+    padding-bottom: 5px;
+  }

@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>CartoLingo</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- leaflet CDN -->
+    <link rel="stylesheet" href="https:\\unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <!-- calcite CDN -->
+    <link rel="stylesheet" href="https:\\s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/css/calcite-web.min.css"> 
+    <!-- leaflet draw plugin -->
+    <link rel="stylesheet" href="https:\\unpkg.com/leaflet.pm@latest/dist/leaflet.pm.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Permanent+Marker|Monda" rel="stylesheet">
+    <link rel="stylesheet" href="styles/mapStyle.css">
+
+    <!-- leaflet CDN script file -->
+    <script src="https:\\unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    <!-- esri leaflet CDN script file -->
+    <script src="https:\\unpkg.com/esri-leaflet@2.2.4/dist/esri-leaflet.js"
+    integrity="sha512-tyPum7h2h36X52O2gz+Pe8z/3l+Y9S1yEUscbVs5r5aEY5dFmP1WWRY/WLLElnFHa+k1JBQZSCDGwEAnm2IxAQ=="
+    crossorigin=""></script>
+    <!-- leaflet draw plugin script CDN -->
+    <script src="https:\\unpkg.com/leaflet.pm@latest/dist/leaflet.pm.min.js"></script>
+    <!-- calcite CDN script file -->
+    <script src="https:\\s3-us-west-1.amazonaws.com/patterns.esri.com/files/calcite-web/1.2.5/js/calcite-web.min.js"></script>
+   
+
+  <style>
+    
+  </style>
+</head>
+<body>
+
+    <div id = "header">
+        <h1>CartoLingo</h1>
+        <h3>Submit data to CartoLingo</h3>
+        <header class="top-nav">
+                <div class="grid-container">
+                  <div class="column-24">
+                    <div>
+                      <a href="home.html" class="top-nav-title">CartoLingo</a>
+                      <nav class="top-nav-list" role="navigation" aria-labelledby="topnav">
+                        <a class="top-nav-link" href="#">Submit Data</a>
+                        <a class="top-nav-link" href="cartolingo_view.html">View Submitted Data</a>
+                        <a class="top-nav-link" href="glottolog.php">Languages of the World</a>
+                        <a class="top-nav-link" href="contact.php">Contact</a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </header>
+    </div>
+    
+    <div id="sidebar">
+            <h3 class = "text-blue">Submit data to CartoLingo</h3>
+            <h5 class = "step">Step 1: Choose/draw a polygon</h5>
+            <br>
+            <h5 class = "step">Step 2: Fill out details for your drawn/chosen polygon and submit!</h5>
+                <form id = "polygonForm" method = "post" enctype="multipart/form-data">
+                    <div>
+                        <h6 class = "avenir-bold" id = "polyDetail">Polygon details </h6>
+                        <!-- <h6>Area: <span id = "area" name = "area"></span></h6>  -->
+                        <h6 id = "polygon-notice"></h6>
+                        <h6>Major language(s) spoken: <span><input type="text" name = "language" placeholder = "Type language(s) name here, separated by comma" required></span>
+                        </h6>
+                        <h6>Degree of certainty: 
+                        <span>
+                            <select name="certainty" id="certainty" required>
+                                <option value="1">1 (Low certainty)</option>
+                                <option value="2">2</option>
+                                <option value="3">3 (High certainty)</option>
+                            </select>
+                        </span>
+                        <input id = "geojson" name = "geojson" type="hidden" value = ""> 
+                        </h6>
+                        <h6>Comments: </h6>
+                        <span><textarea id = "comments" name = "comments" rows = "5" cols = "20"></textarea></span>
+                        <button id = "submit" class = "btn btn-fill btn-clear " type="submit">Submit!</button>
+                    </div>
+                </form>
+                <div id = "results"></div>
+        </div>
+    <div id="map">
+        
+    </div>
+
+
+    <script src="scripts/mapScript.js"></script>
+
+</body>
+</html>

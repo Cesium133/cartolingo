@@ -1,0 +1,71 @@
+body { 
+    margin:0; 
+    padding:0; 
+}
+
+#header {
+    height:210px;
+    text-align:center;
+}
+
+#header h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+    color:black;
+}
+
+#header h3 {
+    font-family: 'Cantarell', sans-serif;
+    color:rgb(110, 109, 109);
+}
+
+#map {
+    height:calc(100% - 210px);
+    width:calc(100% - 29rem);
+    left:1rem;
+}
+
+.top-nav-title, .top-nav-link {
+    font-family: 'Monda', sans-serif;
+}
+
+.top-nav-title:hover, .top-nav-link:hover {
+    color: black;
+}
+
+
+#sidebar {
+    z-index:1000;
+    position:absolute;
+    right:0;
+    top:210px;
+    bottom:0;
+    height: calc(100% - 245px);
+    width: 25rem;
+    padding: 1em;
+    border: 1px solid rgb(150,150,150);
+    background-color: #efefef;
+    
+}
+
+#polyDetail {
+    text-align:center;
+}
+
+.step {
+    padding: 5px 0;
+}
+
+#polygonForm {
+    padding: 5px;
+    background-color: #a9a9a9;
+    z-index: 99;
+}
+
+#sidebar button {
+    margin: 1.0rem auto; 
+    border-radius: 12px;
+} 
+
+
+
